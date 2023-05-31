@@ -1,9 +1,9 @@
 //alert("can you see this");
 
 /*
+
 Here are main things we'll likely need to store for each coffee:
  
-
 name-the mane of the coffee
 pic-the pic of the coffee
 color-the color associated with the coffee
