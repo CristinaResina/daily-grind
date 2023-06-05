@@ -16,9 +16,35 @@ let myDate=new Date();
 
 let today = myDate.getDay();
 
+let coffee="";
+
+function coffeeTemplate(coffee){
+
+    return `
+     <p>
+             <img src="${coffee.pic}" alt="${coffee.alt }" id="coffee" />
+                 <strong class="feature">${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily coffee special is <strong class="feature">${coffee.name}</strong>, ${coffee.desc}</p>
+    
+    `;
+
+    
+}
+
 //today = 3;
 
 switch(today){
+
+    case 1:
+        today = "Monday";
+        coffee = {
+            name: "Bubble Tea",
+            pic:"images/bubble-tea.jpg",
+            alt:"A picture of the bubble tea",
+            color:"pink",
+            day:"Monday",
+            desc:`I love me some bubble tea!`
+        };
+ break;
 
     case 2:
            today = "Tuesday";    
@@ -33,14 +59,7 @@ switch(today){
          today = "Day is Unknown";
 }
 
-let coffee = {
-    name: "Bubble Tea",
-    pic:"images/bubble-tea.jpg",
-    alt:"A picture of the bubble tea",
-    color:"pink",
-    day:"Wednesday",
-    desc:`I love me some bubble tea!`
-}
+document.getElementById("coffee-cup").innerHTML = coffeeTemplate(coffee);
 
 console.log(coffee);
 
